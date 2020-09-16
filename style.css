@@ -1,0 +1,230 @@
+.col-6{
+    column-count: 2;
+}
+
+/* Smooth scrolling effect */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    /* background image always fit screen size */
+    background: url('img/vertical.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
+header{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 4rem;
+    color: #000000;
+}
+
+header > img{
+    position: absolute;
+    float: left;
+    width: 170px;
+}
+
+nav, footer{
+    font-family: 'Raleway', sans-serif;
+}
+
+nav{
+    position: absolute;
+    top: 200px;
+    float: none;
+    min-width: 100%;
+    min-height: 24px;
+    background-color: #FFCE00;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+section{
+    font-family: 'Roboto', sans-serif;
+    padding-left: 24px;
+    margin: 4rem 1.5rem 0 1.5rem;
+    background-color: rgba(221, 0, 0, 0.8);
+    color: #FFFFFF;
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+section > h2{
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #FFCE00;
+    background-color: #000000;
+    padding: 8px;
+    border-radius: 10px;
+    width: max-content;
+    position: static;
+    left: 0;
+}
+
+section > p, section > article > p{
+    padding: 12px 24px 12px 0px;
+    margin: 0px;
+}
+
+section > article > p > img{
+    margin: 0.5rem 0;
+    height: 250px;
+    width: auto;
+}
+
+section#history{
+    margin-top: 28rem;
+    top: 380px;
+}
+
+section#history > ol > li:hover{
+    font-size: 1.2rem;
+    transition: 0.5s;
+    color: #FFCE00;
+}
+
+section#history > ol > li:first-child:hover:after{
+    content: " (100 - 800)";
+}
+
+section#history > ol > li:nth-child(2):hover:after{
+    content: " (800 - 1814)";
+}
+
+section#history > ol > li:nth-child(3):hover:after{
+    content: " (1814 - 1918)";
+}
+
+section#history > ol > li:nth-child(4):hover:after{
+    content: " (1918 - 1945)";
+}
+
+section#history > ol > li:nth-child(5):hover:after{
+    content: " (1945 - 1990)";
+}
+
+section#history > ol > li:nth-child(6):hover:after{
+    content: " (1990 - NOW)";
+}
+
+section#weather{
+    top: 680px;
+}
+
+section#cuisine{
+    top: 980px;
+}
+
+.back{
+    float: right;
+}
+
+.back > a{
+    position: relative;
+    top: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.back > a:hover{
+    color: #FFCE00;
+    transition: 0.2s;
+}
+
+img{
+    display: block;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul > a > li{
+    float: none;
+    padding: 8px 30px;
+    color: #000000;
+    line-height: 24px;
+}
+
+ul > a > li:hover{
+    background-color: #DD0000;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+a{
+    text-decoration-line: none;
+    color: #000000;
+}
+
+.back > a{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+footer{
+    background-color: #FFCE00;
+    color: #000000;
+    min-height: 3rem;
+    line-height: 3rem;
+    max-width: 100%;
+    /* always stick-at-bottom footer */
+    /* position: fixed; */
+    margin-top: 4rem;
+    bottom: 0;
+    padding-left: 2rem;
+}
+
+footer > a{
+    color: #0c8af1;
+    text-decoration: underline;
+}
+
+footer > a:hover{
+    color: #FFFFFF;
+}
+
+/* When screen-width is wider than 980px */
+@media screen and (min-width: 980px){
+    body{
+        background-color: rgba(204, 242, 255, 1);
+        background-position: right top;
+        background-size: contain;
+    }
+    nav{
+        position: relative;
+        top: auto;
+        float: right;
+        min-width: 50%;
+        margin-top: 0rem;
+    }
+    ul > a > li{
+        float: left;
+        padding: 12px 18px;
+    }
+    section#history{
+        margin-top: 12rem;
+    }
+}
+
+/* When screen-width is shorter than 680px */
+@media screen and (max-width: 680px){
+    .col-6{
+        column-count: 1;
+    }
+
+    .col-6 > img{
+        margin-top: 1.5rem;
+    }
+
+    .col-6 > img:first-child{
+        margin-top: 0rem;
+    }
+}
